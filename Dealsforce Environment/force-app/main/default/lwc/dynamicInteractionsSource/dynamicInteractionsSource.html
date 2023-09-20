@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Dynamic Interactions">
+        <lightning-input type="text" value={industry} onchange={handleChange}></lightning-input>
+        <template lwc:if={indData}>
+            <lightning-datatable 
+            onrowselection={handleRowSelection} 
+            columns={colInfo} 
+            data={indData} 
+            key-field="Id"
+            max-row-selection="1">
+
+            </lightning-datatable>
+        </template>
+
+</lightning-card>
+</template>

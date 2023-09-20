@@ -1,0 +1,22 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Card Title
+      </div>
+      <div slot="actions">
+        <lightning-button 
+          variant="base"
+          label="Save Account" 
+          onclick={handleClick} 
+        ></lightning-button>
+        <lightning-button 
+          variant="success"
+          label="Update" 
+          onclick={updateClick} 
+        ></lightning-button>
+      </div>
+      <div slot="footer">
+        I am from Footer
+      </div>
+    </lightning-card>
+</template>

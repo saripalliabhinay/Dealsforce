@@ -1,0 +1,12 @@
+<template>
+    <lightning-modal-header label="LWC to Flow">
+    </lightning-modal-header>
+    <lightning-input label="Industry" value={industry} onchange={handleChange}></lightning-input>
+    <lightning-flow
+      flow-api-name="Survey_customers"
+      flow-finish-behavior="RESTART"
+      flow-input-variables={inputVariables}
+      flow-interview-id=""
+      onstatuschange={handleStatusChange}
+    ></lightning-flow>
+</template>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+        <div slot="title">
+            Create Contact
+        </div>
+        <div slot="actions">
+
+        </div>
+        <div>
+            <!-- Card Body  -->
+            <lightning-record-edit-form onsuccess={handleSuccess} density="compact" object-api-name={objectName}>
+                <lightning-input-field field-name="FirstName" variant="standard"></lightning-input-field>
+                <lightning-input-field field-name="LastName" variant="standard"></lightning-input-field>
+                <lightning-input-field field-name="AccountId" variant="standard" value={recordId}>
+                </lightning-input-field>
+                <lightning-button variant="base" label="Submit" type="submit"></lightning-button>
+                <lightning-button 
+                  variant="base"
+                  label="Cancel" 
+                  onclick={handleCancel} 
+                ></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

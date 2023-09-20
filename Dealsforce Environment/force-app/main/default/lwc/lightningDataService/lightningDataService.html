@@ -1,0 +1,38 @@
+<template>
+    <lightning-radio-group label="Radio Button Group Display" options={radioOptions} value={selectedValue}
+        onchange={handleChange}>
+    </lightning-radio-group>
+    <template lwc:if={properties.isBoth}>
+        <lightning-card variant="Narrow" title="From LDS View" icon-name="standard:contact">
+            <lightning-record-form id={recordId} object-api-name={objectApiName} layout-type="Full">
+            </lightning-record-form>
+        </lightning-card>
+    </template>
+    <template lwc:if={properties.isEdit}>
+        I am from Edit
+        <lightning-card variant="Narrow" title="From LDS Edit" icon-name="standard:contact">
+            <lightning-record-edit-form onsuccess={handleSuccess} onload={handleLoad} onsubmit={handleSubmit} id={recordId} object-api-name={objectApiName}>
+                <lightning-input-field field-name={firstName}></lightning-input-field>
+                <lightning-input-field field-name={lastName}></lightning-input-field>
+                <lightning-button lable="Submit" type="submit"></lightning-button>
+                <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
+            </lightning-record-edit-form>
+        </lightning-card>
+    </template>
+    <template lwc:if={properties.isCustom}>
+        I am from Custom
+          <lightning-input 
+                 type="text"
+                 name="name"
+                 label="Enter Name"
+                 value={value}
+               onchange={handleInputChange}></lightning-input>
+               <lightning-input 
+                 type="number" 
+                 name="age" 
+                 label="Enter a Age" 
+                 value={age}
+               onchange={handleInputChange}></lightning-input>
+    </template>
+
+</template>

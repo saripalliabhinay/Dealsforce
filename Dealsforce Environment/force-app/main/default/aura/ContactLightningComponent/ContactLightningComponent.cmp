@@ -1,0 +1,4 @@
+<aura:component controller="ContactAccessor" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.onLoad}" />
+    <h1>Welcome back to Aura</h1>
+</aura:component>

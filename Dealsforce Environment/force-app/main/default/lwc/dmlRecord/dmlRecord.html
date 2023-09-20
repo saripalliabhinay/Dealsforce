@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title={labelData}>
+        <div>
+            I am at Div
+            <p> I am at Paragraph</p>
+            <h>I am at Heading</h>
+        </div>
+        <img src={imageToLoad}></img>
+        <lightning-button label="Quick Contact " onclick={navigateToContactWithDefault}></lightning-button> 
+        <lightning-button label="Create Record" onclick={createRecordWithLDS}></lightning-button>
+        <lightning-button label="Update Record" onclick={updateUsingLDS}></lightning-button>
+        <lightning-button label="Delete Record" onclick={deleteUsingLDS}></lightning-button>
+        <lightning-button label="Navigate to Counter" onclick={rediectToOtherComponent}></lightning-button>
+        <lightning-button label="Generate URL ( At Console)" onclick={redirectWithGenerateUrl}></lightning-button>
+        <template lwc:if={accountLst}>
+            <lightning-datatable onrowselection={handleSelectedRow} max-row-selection="1" key-field="Id" data={accountLst} columns={columns}>
+            </lightning-datatable>
+            <lightning-button label="Update Selected Record" onclick={updateSelectedRecord}></lightning-button>
+            <lightning-button label="Delete Selected Record" onclick={deleteSelectedRecord}></lightning-button>
+            <lightning-button label="Navigate to Selected Record" onclick={redicetToDetailPage}></lightning-button>
+            <lightning-button label="Navigate to Home" onclick={redirectToHomePage}></lightning-button>
+        </template>
+    </lightning-card>
+</template>

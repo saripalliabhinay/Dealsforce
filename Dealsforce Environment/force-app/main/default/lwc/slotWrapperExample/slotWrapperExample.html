@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+        <div class="slds-m-around_small">
+            <c-named-slot-example>
+                <span slot="firstName">Hari</span>
+                <span slot="lastName">Prasad</span>
+                <lightning-input slot="age" type="number" variant="standard" name="name" label="Age" placeholder="type here..."></lightning-input>
+            </c-named-slot-example>
+        </div>
+    </lightning-card>
+    
+</template>

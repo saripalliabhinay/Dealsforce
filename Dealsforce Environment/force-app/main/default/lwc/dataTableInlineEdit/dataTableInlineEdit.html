@@ -1,0 +1,21 @@
+<template>
+    Data Table Inline Editing Info 2
+    <p>{recordId}</p>
+    <lightning-layout horizontal-align="center" pull-to-boundary="small" vertical-align="start">
+        <template lwc:if={allConResult.data}>
+            <lightning-datatable key-field="Id" data={allConResult.data} columns={columnInfo} draft-values={inlineDraft}
+                onsave={handleSave}></lightning-datatable>
+        </template>
+    </lightning-layout>
+
+    <lightning-layout horizontal-align="center" pull-to-boundary="small" vertical-align="start">
+        <template lwc:if={multileLevelAccountWithCases}>
+            <lightning-datatable key-field="Id" 
+            data={multileLevelAccountWithCases} 
+            columns={columsWithCasesInfo}
+             draft-values={inlineDraft}
+                onsave={handleSave}
+                onrowaction={handleRowAction}></lightning-datatable>
+        </template>
+    </lightning-layout>
+</template>

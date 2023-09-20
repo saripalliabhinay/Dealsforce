@@ -1,0 +1,14 @@
+<template>
+    <div>
+        <p>Access in JS</p>
+    </div>
+    <lightning-card title="UI Object Api For Events Info" >
+    <lightning-combobox
+                name="Picklists"
+                label="Pick Lists"
+                value={selectedValue}
+                placeholder="Select Picklist"
+                options={combBoxValues}
+                onchange={handleChange} ></lightning-combobox>
+    </lightning-card>
+</template>

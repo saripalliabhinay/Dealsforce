@@ -1,0 +1,5 @@
+<aura:component implements="lightning:isUrlAddressable">
+    <aura:handler name="init" value="{!this}" action="{!c.onLoad}" />
+    <aura:attribute name="counterAtAura" type="Integer"></aura:attribute>
+  <c:wireKnowledgeTest aura:id="navRef" counter="{!v.counterAtAura}"/>
+</aura:component>

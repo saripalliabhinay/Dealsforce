@@ -1,0 +1,15 @@
+<template>
+    <c-selector-component onselect={handleSelection}></c-selector-component>
+    <lightning-card title="Related Records" >
+         <template for:each={relatedRecords} for:item="eachItem" for:index="eachIndex">
+               <c-display-detail related-fields={relatedFields} key={eachItem.Id} each-record-info={eachItem} related-object-name={selectedObject}></c-display-detail>
+           </template>
+    </lightning-card>
+    <template lwc:if={isTableDisplay}>
+        <lightning-card title="Related Table" >
+            <c-display-data-table related-records={relatedRecords} 
+            related-label-with-fields={relatedLabelWithFields}></c-display-data-table>
+       </lightning-card>
+    </template>
+    
+</template>

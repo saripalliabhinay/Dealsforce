@@ -1,0 +1,14 @@
+<template>
+    <lightning-modal-header label="Edit Account">
+        Update Account
+    </lightning-modal-header>
+    <lightning-modal-body>
+        <lightning-input type="text" label="Enter Name" value={info.Name}></lightning-input>
+        <lightning-input type="text" label="Rating" value={info.Rating}></lightning-input>
+        <lightning-input type="text" label="Industry" value={info.Industry}></lightning-input>
+        <lightning-input type="text" label="Active" value={info.Active__c}></lightning-input>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button variant="base" label="Save" onclick={handleSave}></lightning-button>
+    </lightning-modal-footer>
+</template>

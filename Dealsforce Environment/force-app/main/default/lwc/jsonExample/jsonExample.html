@@ -1,0 +1,14 @@
+<template>
+    Test
+    <ol>
+    <template for:each={contryRelatedInfo} for:item="eachItem" for:index="eachInded">
+        <li key={eachItem.country}>{eachItem.country}</li>
+        <li key={eachItem.state}>{eachItem.state}</li>
+    </template>
+    </ol>
+    <lightning-datatable
+      key-field="id"
+      data={contryRelatedInfo}
+      columns={columdsInfo}
+    ></lightning-datatable>
+</template>
