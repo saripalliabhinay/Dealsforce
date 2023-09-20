@@ -1,4 +1,6 @@
 public class GatherMarks {
 
 public integer x=100;
+
+public String name='Dealsforce';
 }
