@@ -1,0 +1,27 @@
+<template>
+    <div>
+        I am inside Div
+        <p>
+            I am inside Para Graph : User Id is {userInfo}
+        </p>
+    </div>
+    <template lwc:if={hasCustomerPermission}>
+        <div>
+            I am displaying because user has customer permissions
+        </div>
+    </template>
+    <template lwc:if={hasCustomerPermission}>
+        <div>
+            I am displaying because user has standard permissions i.e. View Setup
+        </div>
+    </template>
+    <div>
+        Below details are from Label </br>
+        <label>{label.lwcLabel}</label></br>
+        <label>{label.infoLabel}</label>
+    </div>
+    <img src={imageDetails} height="50" width="50"></img>
+    <p>Currently I am displaying on {displayingScreen}</p>
+    Current user Laungage {currentLang}
+
+</template>

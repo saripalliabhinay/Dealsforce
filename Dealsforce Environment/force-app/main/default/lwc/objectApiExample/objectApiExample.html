@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="UI Object Api Name" >
+        <template lwc:if={isLoaded}>
+            <lightning-combobox
+                name="Picklists"
+                label="Pick Lists"
+                value={selectedPickList}
+                placeholder="Select Picklist"
+                options={picklistFields}
+                onchange={handleChange} ></lightning-combobox>
+        </template>
+        <template lwc:else>
+            Still Loading....
+        </template>
+        Test Info
+        <template lwc:if={isPopulated}>
+            Populated
+        {fetchedPickLists.data.values}
+        </template>
+    </lightning-card>
+</template>

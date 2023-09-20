@@ -1,0 +1,26 @@
+<template>
+    {name}
+
+    <p>NO of times called during Life Cycle Hooks: {noOfTimesCalled}</p>
+    <lightning-input onchange={handleChange} value={changeMe} type="text" variant="standard" name="name" label="Enter Text" placeholder="type here..."></lightning-input>
+    value is : {changeMe}
+    <template lwc:if={isCat}>
+        Stement 1
+    </template>
+    <template lwc:elseif={isRat}>
+        Inside Rat
+    </template>
+    <template lwc:elseif={isDog}>
+        Inside Dog
+    </template>
+    <template lwc:else>
+        None
+    </template>
+    <lightning-button variant="base" label="Show Cat" title="titleName" onclick={handleCat}></lightning-button>
+    <lightning-button variant="base" label="Show rat" title="titleName" onclick={handleRat}></lightning-button>
+    <lightning-button variant="base" label="Show Dog" title="titleName" onclick={handleDog}></lightning-button>
+
+    {itemName} 
+    <lightning-button variant="base" label="get setter example" title="titleName" onclick={handleClick}></lightning-button>
+
+</template>

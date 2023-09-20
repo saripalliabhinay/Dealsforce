@@ -1,0 +1,10 @@
+<template>
+    <lightning-input value={enterNoOfPersons} type="number" variant="standard" 
+    name="name" label="No Of Persons Test" placeholder="type here..." onchange={callOnPersonChange}></lightning-input>
+    <div onpassage={jk} onbubblepass={handleBubblePass}>
+        <template for:each={enterNoOfPersons} for:item="eachItem" for:index="index">
+            <c-child-example key={eachItem}></c-child-example>
+        </template>
+    </div>
+    
+</template>

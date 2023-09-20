@@ -1,0 +1,19 @@
+<template>
+    I am from LWC Test
+    <table>
+        <tr>
+            <th>Case Number</th>
+            <th>Cse Status</th>
+        </tr>
+        <template for:each={caseData} for:index="eachIndex" for:item="eachItem">
+            <tr data-id={eachItem.Id} key={eachItem.Id} onclick={handleRowClick}>
+                <td>
+                    {eachItem.caseNumber}
+                </td>
+                <td>
+                    {eachItem.Status}
+                </td>
+            </tr>
+        </template>
+    </table>
+</template>

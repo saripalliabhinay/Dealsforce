@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title={eachRecordInfo.Name} >
+        <lightning-record-view-form
+        object-api-name={relatedObjectName}
+        record-id={eachRecordInfo.Id}
+    >
+    <template for:each={topFields} for:index="eachIndex" for:item="eachItem">
+
+        <lightning-output-field key={eachItem} field-name={eachItem}> </lightning-output-field>
+    </template>
+    </lightning-record-view-form>
+    </lightning-card>
+</template>
